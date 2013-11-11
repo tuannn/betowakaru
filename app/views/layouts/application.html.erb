@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Betowakaru</title>
+		<%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+		<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+		<%= csrf_meta_tags %>
+		<script language="javascript" type="text/javascript">
+			function clearText(field) {
+				if (field.defaultValue == field.value)
+					field.value = '';
+				else if (field.value == '')
+					field.value = field.defaultValue;
+			}
+		</script>
+	</head>
+	<body>
+		
+		<%= render("layouts/header")%>
+		<%= render("layouts/banner")%>
+		<%= render("layouts/menu")%>
+		<%= render("layouts/left")%>
+		
+		<%= yield %>
+		
+		<%= render("layouts/right")%>
+		<%= render("layouts/footer")%>
+
+	</body>
+</html>
