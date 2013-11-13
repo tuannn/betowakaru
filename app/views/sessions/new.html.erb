@@ -1,0 +1,26 @@
+<div class="templatemo_box">
+	<h2><span></span>Log in</h2>
+
+	<%=form_for(:session, url: sessions_path) do |f| %>
+	<%= f.label :email %>
+	<%= f.text_field :email %>
+	<br>
+	<%= f.label :password %>
+	<%= f.password_field :password %>
+
+	<br>
+
+	<p align="center">
+		<%= f.submit "Log in", class: "btn btn-large btn-primary" %>
+	</p>
+
+	<p align="center">
+		<a href="#">Forgot your password?</a>
+		<%= link_to '| Sign up now' , new_user_path %> </a>
+
+	</p>
+
+	<% end %>
+
+</div>
+

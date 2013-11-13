@@ -15,14 +15,20 @@
 		</script>
 	</head>
 	<body>
-		
+
 		<%= render("layouts/header")%>
 		<%= render("layouts/banner")%>
 		<%= render("layouts/menu")%>
 		<%= render("layouts/left")%>
-		
+
+		<% flash.each do |key, value| %>
+		<div class="alert alert-<%= key %>">
+			<%= value %>
+		</div>
+		<% end %>
+
 		<%= yield %>
-		
+
 		<%= render("layouts/right")%>
 		<%= render("layouts/footer")%>
 

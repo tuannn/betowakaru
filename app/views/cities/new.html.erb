@@ -1,0 +1,25 @@
+<div class="templatemo_box">
+	<h2><span></span>Insert City Information</h2>
+
+	<%=form_for(:city, url: cities_path) do |f| %>
+	<fieldset>
+		<%#= render 'shared/error_messages' %>
+		<%= label_tag(:name, "City name") %>
+		<%= text_field_tag (:name)%>
+		<br>
+		<%= label_tag(:description, "Description") %>
+		<%= text_area_tag(:description, "", size: "55x26") %>
+		
+		
+		<br>
+		
+		<p align="center">
+			<%= f.submit "Insert City Information" %>
+		</p>
+
+	</fieldset>
+
+	<% end %>
+
+</div>
+

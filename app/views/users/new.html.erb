@@ -1,0 +1,33 @@
+<div class="templatemo_box">
+	<h2><span></span>Create Account</h2>
+
+	<%=form_for(@user) do |f| %>
+	<fieldset>
+		<%= render 'shared/error_messages' %>
+		<%= f.label :name %>
+		<%= f.text_field :name %>
+		<br>
+		<%= f.label :email %>
+		<%= f.text_field :email %>
+		<br>
+		<%= f.label :password %>
+		<%= f.password_field :password %>
+		<br>
+		<%= f.label :repassword %>
+		<%= f.password_field :password_confirmation %>
+		<br>
+		<p>
+			I agree to the <a href="">Terms and Conditions</a> and <a href="">Privacy Policy</a>
+			<%= check_box_tag :service %>
+		</p>
+		<br>
+		<p align="center">
+			<%= f.submit "Create my account", class: "btn btn-large btn-primary" %>
+		</p>
+
+	</fieldset>
+
+	<% end %>
+
+</div>
+

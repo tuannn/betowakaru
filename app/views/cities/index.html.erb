@@ -1,0 +1,65 @@
+<div class="templatemo_box">
+	<h2><span></span>Cities information center</h2>
+
+	<div class="body">
+
+		<p>
+			<%= form_for(:city, url: city_path(:city_id), method: :get) do |f| %>
+				<%= select_tag(:city_id, options_from_collection_for_select(@cities, :id, :name))%>
+				<%= submit_tag("Go")%>
+			<% end %>
+		</p>
+
+	</div>
+
+	<div class="box_bottom">
+		<span></span>
+	</div>
+</div>
+
+<div class="templatemo_box">
+	<h2><span></span>Popular Places</h2>
+
+	<div class="body">
+
+		<div class="news_box">
+			<a href="#"> <%= image_tag("templatemo_image_06.jpg", alt: "image", class:"news_image") %></a>
+			<h3><a href="#">Praesent pretium diam quam</a></h3>
+			<p>
+				Praesent accumsan porta odio eget hendrerit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ut nunc nisl, in pellentesque mi.
+			</p>
+
+			<div class="cleaner"></div>
+		</div>
+
+		<div class="news_box">
+			<a href="#"><%= image_tag("templatemo_image_07.jpg", alt: "image", class:"news_image") %></a>
+			<h3><a href="#">Aliquam tincidunt mauris sed</a></h3>
+			<p>
+				Nam non nisl massa, vitae dapibus nisl. Vivamus iaculis gravida odio sed tempor. Fusce tempor faucibus est, ac feugiat metus accumsan sit amet.
+			</p>
+			<div class="cleaner"></div>
+		</div>
+
+		<div class="news_box">
+			<a href="#"><%= image_tag("templatemo_image_08.jpg", alt: "image", class:"news_image") %></a>
+			<h3><a href="#">Curabitur quis nulla purus</a></h3>
+			<p>
+				Praesent rhoncus faucibus nibh, non molestie lectus sagittis sed. Praesent ac sem lectus. Cras molestie elit sit amet velit tincidunt imperdiet. Mauris nulla purus.
+			</p>
+			<div class="cleaner"></div>
+		</div>
+
+		<div class="more float_r">
+			<a href="#">View All</a>
+		</div>
+
+		<div class="cleaner"></div>
+
+	</div>
+
+	<div class="box_bottom">
+		<span></span>
+	</div>
+</div>
+

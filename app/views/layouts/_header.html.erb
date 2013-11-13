@@ -3,20 +3,30 @@
 	<div id="templatemo_header" >
 
 		<div id="site_title">
-			<h1><a href="http://www.templatemo.com" target="_parent"> <%= image_tag("templatemo_logo.png", alt: "City Portal") %> <span>VIET NAM CITIES INFORMATION</span> </a></h1>
+			<h1><a href="<%= root_path%>" target="_parent"> <%= image_tag("templatemo_logo.png", alt: "City Portal") %> <span>VIET NAM CITIES INFORMATION</span> </a></h1>
 		</div>
 		<!-- end of site_title -->
 
 		<div id="header_right">
 
 			<ul id="header_button">
+				<% if(!signed_in?) %>
 				<li>
-					<a href="#"><%= image_tag("templatemo_home.jpg", alt: "home") %></a>
+					<a href="<%= signin_path%>"> <%= image_tag("loginicon.jpg", alt: "Login") %></a>
+				</li>
+				<% else %>
+				<li>
+					<a href="<%= admin_path%>"><%= image_tag("templatemo_home.jpg", alt: "home") %></a>
 				</li>
 				<li>
+
 					<a href="#"> <%= image_tag("templatemo_contact.jpg", alt: "contact us") %></a>
+
 				</li>
-				
+				<li>
+				<%= link_to image_tag("logouticon.jpg", alt: "logout"), signout_path, method: :delete%>
+				</li>
+				<% end %>
 			</ul>
 
 			<div class="cleaner"></div>
